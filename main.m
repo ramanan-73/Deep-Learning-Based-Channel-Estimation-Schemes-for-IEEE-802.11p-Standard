@@ -78,7 +78,7 @@ fD                        = 500;%(vel/3.6)/c*fc;         % Doppler freq in Hz
 rchan                     = ch_func.GenFadingChannel(ChType, fD, fs); 
 %% Simulation Parameters 
 load('./samples_indices_100.mat');
-configuration = 'training'; % training or testing
+configuration = 'testing'; % training or testing
 if (isequal(configuration,'training'))
     indices = training_samples;
     EbN0dB           = 40; 
