@@ -60,6 +60,7 @@ for nb=1:NB
 end
 % reset the channel to first state which correspond to the estimation
 reset(rchan);
+release(rchan);
 y = step(rchan, X(:));
 Y = reshape(y,Ns, NB);
 end
