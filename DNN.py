@@ -1,12 +1,12 @@
 from scipy.io import loadmat
-from tensorflow.keras.initializers import TruncatedNormal
-from tensorflow.keras.callbacks import ModelCheckpoint, ReduceLROnPlateau
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras.models import Sequential
+from keras.initializers import TruncatedNormal
+from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau
+from keras.layers import Dense
+from keras.callbacks import EarlyStopping
+from keras.models import Sequential
 import pickle
 import numpy as np
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import os
 import sys
 from sklearn.preprocessing import StandardScaler
