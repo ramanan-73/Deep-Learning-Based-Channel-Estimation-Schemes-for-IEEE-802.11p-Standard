@@ -142,7 +142,7 @@ else:
         YS = scalery.transform(Y)
 
         model = load_model(
-            "./{}_{}_{}_{}_DNN_{}.h5".format(
+            "./{}_{}_{}_{}_DNN_{}.keras".format(
                 mobility, channel_model, modulation_order, scheme, testing_snr
             )
         )
