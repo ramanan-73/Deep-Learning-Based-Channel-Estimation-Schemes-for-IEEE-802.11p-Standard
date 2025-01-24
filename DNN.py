@@ -65,8 +65,12 @@ if configuration_mode == 13:
     model.compile(loss='mean_squared_error', optimizer='adam', metrics=['acc'])
     print(model.summary())
 
-    model_path = './{}_{}_{}_{}_DNN_{}.h5'.format(mobility, channel_model, modulation_order, scheme, training_snr)
-    checkpoint = ModelCheckpoint(model_path, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
+    model_path = "./{}_{}_{}_{}_DNN_{}.keras".format(
+        mobility, channel_model, modulation_order, scheme, training_snr
+    )
+    checkpoint = ModelCheckpoint(
+        model_path, monitor="val_acc", verbose=1, save_best_only=True, mode="max"
+    )
     RLearningRate = ReduceLROnPlateau(monitor='val_loss', factor=0.01, patience=20, min_lr=0.000001, min_delta=0.002)
     es = EarlyStopping(monitor="val_loss", patience=20, verbose=2, mode="min")
     callbacks_list = [checkpoint, RLearningRate, es]
