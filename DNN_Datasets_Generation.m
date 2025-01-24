@@ -1,7 +1,7 @@
 clc;clearvars;close all; warning('off','all');
 % Load pre-defined DNN Testing Indices
 load('./samples_indices_100.mat');
-configuration = 'testing'; % training or testing
+configuration = 'training'; % training or testing
 % Define Simulation parameters
 nUSC                      = 52;
 nSym                      = 50;
